@@ -16,6 +16,12 @@
     "enabled": true,
     "rules": {
       "recommended": true,
+      "correctness": {
+        "noUnusedImports": {
+          "level": "on",
+          "fix": "safe"
+        }
+      },
       "suspicious": {
         "noConsole": {
           "level": "warn",
