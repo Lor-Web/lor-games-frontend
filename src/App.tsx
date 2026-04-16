@@ -1,23 +1,16 @@
 import type React from "react";
-import Badge from "./components/Badge";
-import Button from "./components/Button";
-import Card from "./components/Card";
-import Input from "./components/Input";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import Home from "./pages/Home";
+
+const router = createBrowserRouter([
+	{
+		index: true,
+		element: <Home />,
+	},
+]);
 
 const App: React.FC = () => {
-	return (
-		<div>
-			<Card>
-				<Badge>
-					<h1>hi</h1>
-				</Badge>
-				<Input />
-				<br />
-				<br />
-				<Button>TEST</Button>
-			</Card>
-		</div>
-	);
+	return <RouterProvider router={router} />;
 };
 
 export default App;
