@@ -1,0 +1,69 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 26px;
+
+  border-radius: $radius-xl;
+  border: none;
+
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  color: #4a2e00;
+
+  background: $gradient-gold;
+
+  box-shadow: $inner-light, $shadow-deep;
+
+  cursor: pointer;
+
+  transition: all 0.1s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.1) 40%,
+      transparent
+    );
+  }
+
+  &:active {
+    transform: translateY(4px);
+
+    box-shadow:
+      inset 0 2px 0 rgba(0, 0, 0, 0.2),
+      0 2px 0 #2a1c0e;
+  }
+
+  &:disabled {
+    background: linear-gradient(#aaa, #777);
+    color: #444;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+.green {
+  background: $gradient-green;
+  color: #003300;
+}
+
+.danger {
+  background: linear-gradient(#ff8a8a, #ff3b3b);
+  color: #fff;
+}
+
+.big {
+  padding: 18px 32px;
+  font-size: 18px;
+}
