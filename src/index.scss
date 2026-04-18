@@ -4,14 +4,17 @@
 
 body {
   margin: 0;
+  padding: 10px;
   font-family: $font-main;
   background: radial-gradient(circle at top, #5a3b1e, #2f1e0f);
   color: $color-text;
+  min-height: 100vh;
 }
 
 h1,
 h2,
 h3 {
+  margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
 }

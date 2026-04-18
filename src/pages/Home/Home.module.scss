@@ -1,0 +1,13 @@
+.home {
+  display: flex;
+  justify-content: center;
+
+  &Widget {
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    text-align: center;
+  }
+}
